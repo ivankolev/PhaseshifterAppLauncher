@@ -23,37 +23,37 @@
             android:text="@string/button1"
             android:id="@+id/button1"
             android:layout_alignParentTop="false" android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true" android:background="#ff607d8b" android:layout_marginTop="20dp"
+            android:layout_alignParentEnd="true" android:background="#ff607d8b" android:layout_marginTop="@dimen/activity_button_margin"
             android:layout_below="@+id/textView"
         android:onClick="openToastMessage" />
     <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button2"
-            android:id="@+id/button2"
-            android:layout_marginTop="20dp" android:layout_below="@+id/button1" android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true" android:background="@color/primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button2"
+        android:id="@+id/button2"
+        android:layout_marginTop="@dimen/activity_button_margin" android:layout_below="@+id/button1" android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" android:background="@color/primary"
         android:onClick="openToastMessage" />
     <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button3"
-            android:id="@+id/button3" android:layout_below="@+id/button2"
-            android:layout_marginTop="20dp" android:layout_alignParentStart="true"
-            android:layout_alignEnd="@+id/button2" android:background="@color/primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button3"
+        android:id="@+id/button3" android:layout_below="@+id/button2"
+        android:layout_marginTop="@dimen/activity_button_margin" android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/button2" android:background="@color/primary"
         android:onClick="openToastMessage" />
     <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button4"
             android:id="@+id/button4"
             android:layout_centerVertical="true" android:layout_alignEnd="@+id/button3"
-            android:layout_alignParentStart="true" android:layout_marginTop="20dp" android:layout_below="@+id/button3"
+            android:layout_alignParentStart="true" android:layout_marginTop="@dimen/activity_button_margin" android:layout_below="@+id/button3"
             android:background="@color/primary"
-        android:onClick="openToastMessage" />
+            android:onClick="openToastMessage" />
     <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button5"
-            android:id="@+id/button5" android:layout_below="@+id/button4"
-            android:layout_marginTop="20dp" android:layout_alignParentStart="true"
-            android:layout_alignEnd="@+id/button4" android:background="@color/primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button5"
+        android:id="@+id/button5" android:layout_below="@+id/button4"
+        android:layout_marginTop="@dimen/activity_button_margin" android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/button4" android:background="@color/primary"
         android:onClick="openToastMessage" />
 </RelativeLayout>
