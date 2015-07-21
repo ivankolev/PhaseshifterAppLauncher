@@ -48,7 +48,10 @@ public class MainActivity extends Activity {
         int duration = Toast.LENGTH_SHORT;
 
         StringBuilder toastText = new StringBuilder();
-        toastText.append("This button will launch my ").append(((Button) view).getText()).append(" application");
+        toastText
+                .append(this.getString(R.string.toast_prefix))
+                .append(((Button) view).getText())
+                .append(this.getString(R.string.toast_postfix));
 
         Toast toast = Toast.makeText(context, toastText, duration);
         TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
