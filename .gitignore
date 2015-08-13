@@ -6,3 +6,9 @@
 PhaseshifterApp.iml
 first.iml
 PhaseshifterAppLauncher.iml
+.navigation
+gradle
+gradle.properties
+gen
+gradlew
+gradlew.bat
