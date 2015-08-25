@@ -2,6 +2,8 @@ package com.phaseshiftlab.phaseshifterapp.first;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -57,5 +59,18 @@ public class MainActivity extends Activity {
         TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
         if( v != null) v.setGravity(Gravity.CENTER);
         toast.show();
+    }
+
+    public void startMovieTitles(View view) {
+        Context context = getApplicationContext();
+        String packageName = "com.phaseshiftlab.phaseshiftermovietitles.first";
+        Intent intent = context.getPackageManager().getLaunchIntentForPackage(packageName);
+        if (intent == null) {
+            // Bring user to the market or let them choose an app?
+            intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("market://details?id=" + packageName));
+        }
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 }
