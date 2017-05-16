@@ -6,7 +6,7 @@
     <string name="appLaunchButton2">SCORES APP</string>
     <string name="appLaunchButton3">LIBRARY APP</string>
     <string name="appLaunchButton4">BUILD IT BIGGER</string>
-    <string name="appLaunchButton5">CAPSTONE: MY APP</string>
+    <string name="appLaunchButton5">CYRILLISCRIPT</string>
     <string name="app_title">App Launcher</string>
     <string name="toast_prefix">"This button will launch my "</string>
     <string name="toast_postfix">" application"</string>
