@@ -62,21 +62,17 @@ public class MainActivity extends Activity {
     }
 
     public void startMovieTitles(View view) {
-        Context context = getApplicationContext();
         String packageName = "com.phaseshiftlab.phaseshiftermovietitles.first";
-        Intent intent = context.getPackageManager().getLaunchIntentForPackage(packageName);
-        if (intent == null) {
-            // Bring user to the market or let them choose an app?
-            intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("market://details?id=" + packageName));
-        }
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+        startApp(packageName);
     }
 
     public void startCyrilliscript(View view) {
-        Context context = getApplicationContext();
         String packageName = "com.phaseshiftlab.cyrilliscript";
+        startApp(packageName);
+    }
+
+    private void startApp(String packageName) {
+        Context context = getApplicationContext();
         Intent intent = context.getPackageManager().getLaunchIntentForPackage(packageName);
         if (intent == null) {
             // Bring user to the market or let them choose an app?
@@ -84,6 +80,6 @@ public class MainActivity extends Activity {
             intent.setData(Uri.parse("market://details?id=" + packageName));
         }
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+        context.startActivity(Intent.createChooser(intent, "Launcher"));
     }
 }
